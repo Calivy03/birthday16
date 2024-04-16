@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "futura md bt";
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+header {
+    background: #fff;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+header .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li a {
+    display: inline-block;
+    color: #000;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+    border-bottom-color: dodgerblue;
+}
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+}
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+    }
+    .container{
+        height:100%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #fff;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    header #nav_check:checked ~ nav {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li a {
+        margin: 5px 0;
+    }
+    .container{
+        height:100%;
+    }
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/background.png);
+    background-position: center;
+    background-size: cover;
+    padding-left:8%;
+    padding-right:8%;
+    box-sizing:border-box;
+}
+.row{
+    display:flex;
+    height:88%;
+    align-items:center;
+}
+.col{
+    flex-basis: 50%;
+}
+h1{
+    color: #fff;
+    font-size: 100px;
+}
+p{
+    color:#fff;
+    font-size:11px;
+    line-height:15px;
+}
+button{
+    width:180px;
+    color:#000;
+    font-size:12px;
+    padding:12px 0;
+    background:#fff;
+    border:0;
+    border-radius:20px;
+    outline:none;
+    margin-top:30px;
+}
+.card{
+    width:200px;
+    height:230px;
+    display:inline-block;
+    border-radius:10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor:pointer;
+    margin:10px 15px;
+    background-position:center;
+    background-size:cover;
+    transition:transform 0.5s;
+}
+.card1{
+    background-image:url(images/pic1.jpg);
+}
+.card2{
+    background-image:url(images/pic4.jpg);
+}.card3{
+    background-image:url(images/pic2.jpg);
+}.card4{
+    background-image:url(images/pic3.jpg);
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+h5{
+    color:#fff ;
+    text-shadow:0 0 5px #999;
+}
+.card p{
+    text-shadow:0 0 15px #000;
+    font-size:12px;
+}
+/* Add a breakpoint at 768px */
+@media (max-width: 768px) {
+    /* Reduce the font size of the heading */
+    h1 {
+      font-size: 50px;
+    }
+  
+    /* Reduce the font size of the paragraph */
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  
+    /* Reduce the width of the button */
+    button {
+      width: 120px;
+      font-size: 10px;
+      padding: 10px 0;
+    }
+  
+    /* Stack the columns vertically on mobile */
+    .row {
+      flex-direction: column;
+    }
+  
+    /* Adjust the width and margin of the cards */
+    .card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+  
+  /* Add a breakpoint at 992px for tablets */
+  @media (min-width: 768px) and (max-width: 992px) {
+    /* Adjust the font size of the heading */
+    h1 {
+      font-size: 70px;
+    }
+  
+    /* Adjust the width of the button */
+    button {
+      width: 150px;
+      font-size: 12px;
+      padding: 12px 0;
+    }
+  
+    /* Adjust the width and margin of the cards */
+    .card {
+      width: 45%;
+      margin: 10px;
+    }
+  }
